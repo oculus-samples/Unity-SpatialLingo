@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6406cf99f3eda9543b76052362849a20, type: 3}
+  m_Name: 10 LlamaAPI
+  m_EditorClassIdentifier: 
+  m_title: Llama API
+  m_priority: 1010
+  m_tutorialConfig: {fileID: 11400000, guid: e602227bbad52f14980362393177d7cc, type: 2}
+  m_showBanner: 0
+  m_markdownPath: ./Packages/com.meta.utilities.llamaapi/README.md
+  m_reduceTitleLevelBy1: 1
+  m_pageConfigs:
+  - SectionTitle: Meta Llama API
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0
+  - SectionTitle: Overview
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 1
+  - SectionTitle: Installation
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 0
+    HideTitle: 0
+  - SectionTitle: API Overview
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Configuration
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: C# REST API
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: AssistantAI Wrapper
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Example Use
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Example Scenes
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Common Use Cases
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0

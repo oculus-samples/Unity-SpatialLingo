@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction_Dependencies
+  m_EditorClassIdentifier: 
+  m_displayName: Dependencies
+  m_hierarchyName: Introduction/Dependencies
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1006
+  m_overrideMarkdownText: '# Dependencies
+
+
+    This project makes use of the following
+    plugins and software:
+
+
+    - <a href="https://unity.com/download">Unity</a>
+    6000.0.51f1 or newer
+
+    - <a href="https://github.com/MultimediaTechLab/YOLO">YOLO</a>
+    (with <a href="https://cocodataset.org/#home">COCO dataset</a>)
+
+    - See <a
+    href="./Documentation/MetaSdk.md">MetaSdk.md</a> for all Meta libraries used
+
+
+'
+  m_overrideMarkdownRoot: ./

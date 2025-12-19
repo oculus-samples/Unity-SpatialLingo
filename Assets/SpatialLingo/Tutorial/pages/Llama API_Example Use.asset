@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API_Example Use
+  m_EditorClassIdentifier: 
+  m_displayName: Example Use
+  m_hierarchyName: Llama API/Example Use
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1017
+  m_overrideMarkdownText: "## Example Use\n\n\n### Basic Chat Example\n\n```csharp\nusing
+    Meta.Utilities.LlamaAPI;\n\n// ...\n\nvar api_key = \"<Your Key Here>\";\nvar
+    llama = new LlamaRestApi(api_key);\n\nvar chat = llama.StartNewChat($\"You are
+    a translation assistant. You translate sentences from \\\"English\\\" to \\\"Spanish\\\".\");\nvar
+    task = llama.ContinueChat(chat, $\"Translate this sentence from \\\"English\\\"
+    to \\\"Spanish\\\": \\\"Where is the nearest coffee shop?\\\" \");\nvar response
+    = await task;\n\nvar translation = \"\";\nif (response != null)\n{\n    translation
+    = response.message.text;\n}\n\nDebug.Log($\"Translation: {translation}\");\n```\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

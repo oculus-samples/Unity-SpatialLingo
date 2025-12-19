@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Mixed Reality Utility Kit
+  m_EditorClassIdentifier: 
+  m_displayName: Mixed Reality Utility Kit
+  m_hierarchyName: Mixed Reality Utility Kit
+  m_context: {fileID: 11400000, guid: 20842d63546dd4447a3499aaa067af7f, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1004
+  m_overrideMarkdownText: "# Mixed Reality Utility Kit (MRUK)\n\n## Introduction\n\nMeta's
+    [Mixed Reality Utility Kit](https://developers.meta.com/horizon/documentation/unity/unity-mr-utility-kit-overview/)
+    is a set of tools that provide spatial data and tracking, providing apps with
+    a better understanding of the user's immediate environment.\n\n## Use in Spatial
+    Lingo\n\nMRUK is used for the initial placement of Golly Gosh and the tree upon
+    entering the app. It helps ensure the spawn point is in a sensible location for
+    the user, allowing the user to interact with Golly Gosh and the tree in a multitude
+    of setups and environments.\n\nThis is used in [RoomSense.cs](../Assets/SpatialLingo/Scripts/Utilities/RoomSense.cs),
+    in the `SpawnCoroutine()` function. First, MRUK's room object is queried. [`FindSpawnPositions.StartSpawn()`](https://developers.meta.com/horizon/documentation/unity/unity-mr-utility-kit-content-placement#findspawnpositions)
+    is called to instantiate a dummy object, which is then adjusted further to ensure
+    Golly Gosh is properly facing the user. To prevent a \"teleporting\" effect from
+    multiple transform updates, the dummy object is swapped for Golly Gosh as soon
+    as the transform is finalized.\n\nAlso see [RoomSense.prefab](../Assets/SpatialLingo/Prefabs/Utilities/RoomSense.prefab)
+    for MRUK configuration. In particular, the `[BuildingBlock] Find Spawn Positions`
+    GameObject is used to find the starting position for Golly Gosh and the language
+    tree.  \n![SpawnPrefab.png](Images/MRUK/SpawnPrefab.png)\n\n## Sample Scenes\n\n![MRUK-Gym.png](Images/MRUK/MRUK-Gym.png) 
+    \nIn [GymScene.unity](../Assets/SpatialLingo/Scenes/GymScene.unity), the MRUK
+    panel allows toggling the overlay for your current room scan.\n\n![SpawnSample.png](Images/MRUK/SpawnSample.png) 
+    \nIn [FindSpawnPositionsSample.unity](../Assets/SpatialLingo/Scenes/Samples/FindSpawnPositionsSample.unity),
+    the floor placement building block from MRUK is used to place multilpe objects
+    on the user's floor on start.\n"
+  m_overrideMarkdownRoot: .\Documentation/

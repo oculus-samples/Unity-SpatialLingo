@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Face Blurring_Post-Processing
+  m_EditorClassIdentifier: 
+  m_displayName: Post-Processing
+  m_hierarchyName: Face Blurring/Post-Processing
+  m_context: {fileID: 11400000, guid: 400cf6a22014d2b4c80f5a0b61c2ba92, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1015
+  m_overrideMarkdownText: "## Post-Processing\n\nTwo post-processing strategies are
+    available, controlled by the `UseNMS` flag:\n\n\n### Non-Maximum Suppression
+    (UseNMS = true)\n\nThe model\u2019s NMS layer can run on GPU or CPU depending
+    on the active Sentis backend. While it yields more accurate results, it can introduce
+    stalls or higher latency due to the extra post-processing workload.\n\n\n###
+    CPU-based Filtering (UseNMS = false, default)\n\nThe default approach outputs
+    raw boxes and scores without NMS, then processes them on the CPU using a lighter-weight
+    heuristic:\n\n1. All detections with scores above 0.01 are accepted (intentionally
+    permissive threshold)\n2. Detections are converted to `ClassifiedImageObject`
+    format\n3. `ImageObjectClassifier.ProcessClassificationTensors` filters and merges
+    overlapping detections\n4. Results are limited to 32 faces maximum\n\n*tl;dr*
+    Choosing UseNMS=false prioritizes performance over precision; enabling NMS improves
+    accuracy at the cost of potential frame-time spikes depending on backend and
+    workload.\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.objectclassifier\Documentation~/

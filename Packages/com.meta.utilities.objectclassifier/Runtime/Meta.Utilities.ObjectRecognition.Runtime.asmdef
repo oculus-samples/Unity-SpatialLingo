@@ -1,0 +1,20 @@
+{
+    "name": "Meta.Utilities.ObjectRecognition",
+    "rootNamespace": "",
+    "references": [
+        "GUID:63a57c8b658089e49a173b0f0c4870a7",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:7933906a0de55cf4691392e6d173814c",
+        "GUID:dc960734dc080426fa6612f1c5fe95f3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

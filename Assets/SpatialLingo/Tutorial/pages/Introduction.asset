@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction
+  m_EditorClassIdentifier: 
+  m_displayName: Introduction
+  m_hierarchyName: Introduction/Introduction
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1001
+  m_overrideMarkdownText: '![SpatialLingo.png](Documentation/Images/SpatialLingo.png)
+
+
+
+
+
+    Spatial
+    Lingo is a spatialized language practice experience, guiding users to identify
+    and describe objects around their environment in a target language. This was
+    made possible using Meta libraries, such as <a href="https://www.llama.com/">Llama</a>, 
+    <a href="https://developers.meta.com/horizon/documentation/unity/unity-mr-utility-kit-overview/">Mixed
+    Reality Utility Kit (MRUK)</a>, and the <a href="https://developers.meta.com/horizon/documentation/unity/voice-sdk-overview">Voice
+    SDK</a>. This experience supports both hand tracking and controllers.
+
+
+    Follow
+    Golly Gosh (the polyglot!) as they lead you through your own, real-world space,
+    allowing you to practice your vocabulary using familiar objects. Grow the language
+    tree by completing lessons from Golly Gosh, learning nouns, verbs, and adjectives
+    along the way!
+
+
+
+    # Project Overview
+
+
+    The **Spatial Lingo** project
+    helps Unity developers understand and develop for multiple Meta features: Passthrough
+    Camera API (PCA), Voice SDK, Interaction SDK, Mixed Reality Utility Kit (MRUK),
+    Llama API, and Unity Sentis. The main scene as well as multiple sample scenes
+    demonstrate the implementation and usefulness of each feature.
+
+
+    | Gym Scene
+    | Word Cloud Scene | Character Scene | Camera Image Scene |
+
+    |:-------------:|:--------------------:|:---------------------:|:------------:|
+
+    |
+    ![GIF 1](./Documentation/Images/Overview/gif_gym.gif) | ![GIF 2](./Documentation/Images/Overview/gif_wc.gif)
+    | ![GIF 3](./Documentation/Images/Overview/gif_char.gif) | ![GIF 4](./Documentation/Images/Overview/gif_pass.gif)
+    |
+
+
+
+    # License
+
+
+    See <a href="./LICENSE">LICENSE.md</a>.
+
+
+
+    # Contributing
+
+
+    See
+    <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a>.
+
+'
+  m_overrideMarkdownRoot: ./

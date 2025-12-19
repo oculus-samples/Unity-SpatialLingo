@@ -1,0 +1,29 @@
+{
+    "name": "Meta.Utilities.LlamaAPI.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f64c9ebcd7899c3448a08dc9f9ddbe30",
+        "GUID:3b7cf88e9d6729441884290e764f086b",
+        "GUID:51c2c203806c51b44a2e1b60d78e3429"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.meta.xr.sdk.platform",
+            "expression": "77",
+            "define": "HAS_PLATFORM_SDK"
+        },
+        {
+            "name": "com.meta.utilities",
+            "expression": "0",
+            "define": "HAS_META_UTILITIES"
+        }
+    ],
+    "noEngineReferences": false
+}

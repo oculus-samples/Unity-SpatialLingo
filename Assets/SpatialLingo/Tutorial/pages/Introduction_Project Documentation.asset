@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction_Project Documentation
+  m_EditorClassIdentifier: 
+  m_displayName: Project Documentation
+  m_hierarchyName: Introduction/Project Documentation
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1007
+  m_overrideMarkdownText: '# Project Documentation
+
+
+    More information about the
+    services and systems of this project can be found in the <a href="./Documentation">Documentation</a>
+    section.
+
+
+
+    ## Voice Services
+
+
+    - <a href="./Packages/com.meta.utilities.speechandtext/Documentation~/VoiceTranscription.md">Voice
+    Transcription</a>
+
+    - <a href="./Packages/com.meta.utilities.speechandtext/Documentation~/VoiceSynthesis.md">Voice
+    Synthesis</a>
+
+
+
+    ## LLM
+
+
+    - <a href="./Packages/com.meta.utilities.llamaapi/README.md">Llama</a>
+
+
+
+    ##
+    Object Recognition and Tracking
+
+
+    - <a href="./Packages/com.meta.utilities.objectclassifier/Documentation~/ImageObjectRecognition.md">Image
+    Object Recognition</a>
+
+    - <a href="./Packages/com.meta.utilities.objectclassifier/Documentation~/FaceBlurring.md">Face
+    Blurring</a>
+
+
+
+    ## Systems
+
+
+    - <a href="./Documentation/StateMachine.md">Visual
+    Scripting</a>
+
+
+'
+  m_overrideMarkdownRoot: ./

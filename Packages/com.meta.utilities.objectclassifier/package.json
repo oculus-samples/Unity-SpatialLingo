@@ -1,0 +1,7 @@
+{
+    "name": "com.meta.utilities.objectclassifier",
+    "version": "1.0.0",
+    "displayName": "Meta Object Classifier",
+    "description": "Core components for creating in-editor tutorials and documentation.",
+    "hideInEditor": false
+}

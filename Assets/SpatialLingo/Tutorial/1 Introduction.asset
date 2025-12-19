@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6406cf99f3eda9543b76052362849a20, type: 3}
+  m_Name: 1 Introduction
+  m_EditorClassIdentifier: 
+  m_title: Introduction
+  m_priority: 1001
+  m_tutorialConfig: {fileID: 11400000, guid: e602227bbad52f14980362393177d7cc, type: 2}
+  m_showBanner: 0
+  m_markdownPath: ./README.md
+  m_reduceTitleLevelBy1: 0
+  m_pageConfigs:
+  - SectionTitle: Header
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0
+  - SectionTitle: Spatial Lingo
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 1
+  - SectionTitle: Project Overview
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0
+  - SectionTitle: Getting Started
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Showcase Features
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Dependencies
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Project Documentation
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: Sample Scenes
+    ShowSectionInContext: 0
+    ShowSectionAsChild: 1
+    HideTitle: 0
+  - SectionTitle: License
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0
+  - SectionTitle: Contributing
+    ShowSectionInContext: 1
+    ShowSectionAsChild: 0
+    HideTitle: 0

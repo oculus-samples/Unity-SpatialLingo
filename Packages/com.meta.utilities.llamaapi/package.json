@@ -1,0 +1,11 @@
+{
+    "name": "com.meta.utilities.llamaapi",
+    "version": "1.1.0",
+    "displayName": "Meta Llama API Utilities",
+    "description": "Core components for API to Llama endpoints",
+    "hideInEditor": false,
+    "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.meta.xr.sdk.core": "77.0.0"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "com.meta.utilities.taxontracking",
+    "version": "1.0.0",
+    "displayName": "Meta Taxon Tracker Utility",
+    "description": "Core components for tracking 3D objects using 2D image object detection",
+    "hideInEditor": false
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Meta.Utilities.TaxonTracking.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:04376767bc1f3b428aefa3d20743e819",
+        "GUID:272a8fb436017ef46bc333f117faba38",
+        "GUID:a3886518c8f41964899dc237da89632f",
+        "GUID:f5eda1afa2a1241a59c4db6830e1c890",
+        "GUID:4f33052c468c846ed9200084412616d7",
+        "GUID:9c917f9554e3748b5a51d0facb29734b",
+        "GUID:ac1f6662eef4444baa9b7c2d7fb52cfc",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API_Example Scenes
+  m_EditorClassIdentifier: 
+  m_displayName: Example Scenes
+  m_hierarchyName: Llama API/Example Scenes
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1018
+  m_overrideMarkdownText: '## Example Scenes
+
+
+
+    ### LlamaAPISample Scene
+
+
+    The
+    example Llama API scene demonstrates how to make basic calls using the LlamaRestApi
+    class:
+
+
+    Example Image:
+
+
+    ![640_atrium.png](Documentation~/Images/LLAMA/640_atrium.png)
+
+
+    Example
+    Result:
+
+
+    ![ExampleLlama.png](Documentation~/Images/LLAMA/ExampleLlama.png)
+
+
+
+    ###
+    AssistantAISample Scene
+
+
+    The example Assistant AI scene demonstrates how
+    to make basic calls using the AssistantAI class:
+
+
+    Example AssistantAI generating
+    sentences with varying degrees of complexity:
+
+
+    ![ExampleAssistantAI2.png](Documentation~/Images/LLAMA/ExampleAssistantAI2.png)
+
+
+    Example
+    AssistantAI evaluating a user transcription, responding with reasoning:
+
+
+    ![ExampleAssistantAI1.png](Documentation~/Images/LLAMA/ExampleAssistantAI1.png)
+
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

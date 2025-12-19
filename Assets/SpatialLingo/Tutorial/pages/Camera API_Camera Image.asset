@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Camera API_Camera Image
+  m_EditorClassIdentifier: 
+  m_displayName: Camera Image
+  m_hierarchyName: Camera API/Camera Image
+  m_context: {fileID: 11400000, guid: 5e256dd5894a3df4b8f2b18168371232, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1012
+  m_overrideMarkdownText: "## Camera Image\n\nAccess to the camera is facilitated
+    using a `WebCamTextureManager`, which can be made accessible to code using:\n\n```csharp\n[SerializeReference]
+    public WebCamTextureManager cameraTextureManager;\n```\n\nOne of several different
+    resolutions can be requested for the camera, from 320x240 to 1280x960:\n\n```csharp\nvar
+    resolution = new Vector2Int(320, 240); // Different sized can be requested or
+    changed during runtime\ncameraTextureManager.RequestedResolution = resolution;\nCameraTextureManager.Eye
+    = PassthroughCameraEye.Left; // Left and Right cameras available\n```\n\nThe
+    texture is accessible via `CameraTextureManager.WebCamTexture` and can then be
+    directly referenced for a continuous feed, or copied for a single snapshot.\n\n```csharp\nCameraTextureManager.WebCamTexture
+    // WebCamTexture : Texture\n```\n\n\n### Getting Camera Still Texture\n\n```csharp\npublic
+    WebCamTextureManager m_cameraTextureManager;\n\nprivate void Start()\n{\n   
+    GetCameraStillTexture2D(m_cameraTextureManager.WebCamTexture);\n}\n\nprivate
+    Texture2D GetCameraStillTexture2D(WebCamTexture webCamTexture)\n{\n    var bufferSize
+    = webCamTexture.width * webCamTexture.height;\n    cameraImageBuffer = new Color32[bufferSize];\n   
+    var cameraImage = new Texture2D(webCamTexture.width, webCamTexture.height, TextureFormat.RGBA32,
+    false);\n\n    _ = webCamTexture.GetPixels32(cameraImageBuffer);\n    cameraImage.SetPixels32(cameraImageBuffer);\n   
+    cameraImage.Apply();\n    return cameraImage;\n}\n```\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.cameratracking/

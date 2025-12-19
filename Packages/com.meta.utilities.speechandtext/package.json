@@ -1,0 +1,7 @@
+{
+    "name": "com.meta.utilities.speechandtext",
+    "version": "1.0.0",
+    "displayName": "Meta Speech and Text",
+    "description": "Core components for Text to Speech and Speech Transcription.",
+    "hideInEditor": false
+}

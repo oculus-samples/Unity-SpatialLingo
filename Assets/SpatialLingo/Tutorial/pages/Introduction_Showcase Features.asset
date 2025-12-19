@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction_Showcase Features
+  m_EditorClassIdentifier: 
+  m_displayName: Showcase Features
+  m_hierarchyName: Introduction/Showcase Features
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1005
+  m_overrideMarkdownText: '# Showcase Features
+
+
+    Each of these features have
+    been built to be accessible and scalable for other developers to take and build
+    upon in their own projects.
+
+
+
+    ## Object Identification
+
+
+    *Spatial Lingo*
+    is able to identify objects around the user''s environment, allowing for spatial
+    placement and dynamic generation of language lessons.
+
+
+
+    ## Lesson Generation
+
+
+    Dynamic
+    vocabulary lessons are generated as the user progresses in growing the langauge
+    tree. After objects are identified in the user''s environment, relevant verbs
+    and adjectives for those objects are generated to allow for more lesson variety.
+
+
+
+    ##
+    Voice Synthesis
+
+
+    Golly Gosh is able to speak in several different languages.
+    Voice is dynamically synthesized from text, so they can teach users proper pronounciation
+    during language lessons.
+
+
+
+    ## Voice Transcription
+
+
+    Users'' speech is
+    transcribed when presented with a word cloud, which is also supported in several
+    languages.
+
+
+
+    ## Lesson Evaluation
+
+
+    A user''s response is sent to Llama
+    to determine if the user has responded well enough to complete a given lesson''s
+    word cloud.
+
+
+'
+  m_overrideMarkdownRoot: ./

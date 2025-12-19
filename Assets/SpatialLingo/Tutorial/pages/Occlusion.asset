@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Occlusion
+  m_EditorClassIdentifier: 
+  m_displayName: Occlusion
+  m_hierarchyName: Occlusion
+  m_context: {fileID: 11400000, guid: c37f19901e660b54dbba9fc6a8aea13b, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1006
+  m_overrideMarkdownText: "# Occlusion\n\n## Introduction\n\nMeta's [occlusion package](https://developers.meta.com/horizon/documentation/unity/unity-customize-passthrough-passthrough-occlusions/)
+    allows developers to blend AR content with the environment around them. Depth
+    information can be passed to materials and shaders to ensure necessary objects
+    are occluded by the environment, while allowing other effects to render over
+    all else to grab the user's attention.\n\n## Use in Spatial Lingo\n\nFor this
+    example, we'll look at the material used for the grass at the base of the tree.\n![GrassOcclusion.png](Images/Occlusion/GrassOcclusion.png)\n\nThe
+    material for the grass is [M_TreeGrassGroundPatch.mat](../Assets/SpatialLingo/Props/LanguageTree/Mat/M_TreeGrassGroundPatch.mat),
+    with\n[SG_GrassAlphaCut_Mask.shadergraph](../Assets/SpatialLingo/Shaders/SG_GrassAlphaCut_Mask.shadergraph)
+    being the shader. `EnvironmentOcclusion.cginc` provides the depth information,
+    which is wrapped for Shadergraph use in [CalculateEnvironmentDepthOcclusion.hlsl](../Assets/SpatialLingo/Shaders/MetaOcclusion/CalculateEnvironmentDepthOcclusion.hlsl),
+    shown below.\n\n```cs\nvoid CalculateEnvironmentDepthOcclusion_float(float3 posWorld,
+    float environmentDepthBias, out float occlusionValue)\n{\n#ifndef SHADERGRAPH_PREVIEW\n
+    occlusionValue = META_DEPTH_GET_OCCLUSION_VALUE_WORLDPOS(posWorld, environmentDepthBias);\n#else\n
+    occlusionValue = 1.0;\n#endif\n}\n```\n\nWithin the shadergraph for SG_GrassAlphaCut_Mask,
+    we call into `CalculateEnvironmentDepthOcclusion()` using the world position
+    and provided environment depth, which returns 1.0 for objects completely unoccluded,
+    to 0.0 for total occlusion. This value is multiplied with the outgoing alpha
+    calculated from the rest of the shader to ensure the fragment appears consistent
+    with its occlusion status.\n![GrassAlphaCut.png](Images/Occlusion/GrassAlphaCut.png)\n\n##
+    Additional References\n\n- https://developers.meta.com/horizon/documentation/unity/unity-depthapi-occlusions\n-
+    https://developers.meta.com/horizon/documentation/unity/unity-depthapi-occlusions-get-started\n-
+    https://developers.meta.com/horizon/documentation/unity/unity-depthapi-occlusions-advanced-usage\n"
+  m_overrideMarkdownRoot: .\Documentation/

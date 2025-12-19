@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5a46bda3295124c99b0e6537ac7252, type: 3}
+  m_Name: WitaiSettings_ES
+  m_EditorClassIdentifier: 
+  _clientAccessToken: 
+  editorVersionTag: 
+  buildVersionTag: 
+  _appInfo:
+    name: spatial_lingo_es
+    id:
+    lang: es
+    isPrivate: 1
+    createdAt: 2025-12-15T17:59:13-0800
+    trainingStatus: 1
+    lastTrainDuration: 0
+    lastTrainedAt: 1969-12-31T16:00:00-0800
+    nextTrainAt: 1969-12-31T16:00:00-0800
+    intents: []
+    entities: []
+    traits: []
+    versionTags: []
+    voices: []
+  _configData:
+  - {fileID: 778455967693037221}
+  _configurationId: 67b4829d-f5de-49a4-81af-781d4276dc9e
+  _requestType: 0
+  _requestTimeoutMs: 10000
+  endpointConfiguration:
+    _uriScheme: 
+    _authority: 
+    _port: 0
+    _witApiVersion: 
+    _message: 
+    _speech: 
+    _dictation: 
+    _synthesize: 
+    _event: 
+    _converse: 
+  isDemoOnly: 0
+  useIntentAttributes: 1
+  useConduit: 1
+  _manifestLocalPath: ConduitManifest-f52b5e1a-e119-4634-b1dc-2ea3e58d0e7c.json
+  excludedAssemblies:
+  - Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  relaxedResolution: 0
+--- !u!114 &778455967693037221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c2918ba0e7451694416d42d69e0944, type: 3}
+  m_Name: WitComposerData
+  m_EditorClassIdentifier: 
+  canvases: []

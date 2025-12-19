@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Meta SDK Use
+  m_EditorClassIdentifier: 
+  m_displayName: Meta SDK Use
+  m_hierarchyName: Meta SDK Use
+  m_context: {fileID: 11400000, guid: 0f875640dc3edb2408ad6e8323d24674, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1003
+  m_overrideMarkdownText: "# Meta SDK use\n\nMeta SDK libraries used for Spatial
+    Lingo:\n\n- [Audio](https://developers.meta.com/horizon/documentation/unity/meta-xr-audio-sdk-unity/)\n-
+    [Environment Raycast](https://developers.meta.com/horizon/documentation/unity/unity-mr-utility-kit-environment-raycast)\n 
+    - See [CameraTaxonTracker.cs](../Packages/com.meta.utilities.taxontracking/Runtime/Scripts/CameraTaxonTracker.cs)
+    for more.\n- [Hand Tracking](https://developers.meta.com/horizon/documentation/unity/unity-handtracking-overview/)\n-
+    [Interaction](https://developers.meta.com/horizon/documentation/unity/unity-isdk-interaction-sdk-overview/)\n 
+    - See [HandTrigger.cs](../Assets/SpatialLingo/Scripts/Interactions/HandTrigger.cs)
+    for more.\n- [Llama](https://www.llama.com/)\n- [Mixed Reality Utility Kit (MRUK)](https://developers.meta.com/horizon/documentation/unity/unity-mr-utility-kit-overview/)\n-
+    [Passthrough](https://developers.meta.com/horizon/documentation/unity/unity-passthrough)\n-
+    [Voice](https://developers.meta.com/horizon/documentation/unity/voice-sdk-overview)\n 
+    - See [VoiceSynthesis.md](../Packages/com.meta.utilities.speechandtext/Documentation~/VoiceSynthesis.md)
+    and [VoiceTranscription.md](../Packages/com.meta.utilities.speechandtext/Documentation~/VoiceTranscription.md)
+    for more.\n- [XR Camera Rig](https://developers.meta.com/horizon/documentation/unity/unity-ovrcamerarig/)\n"
+  m_overrideMarkdownRoot: .\Documentation/

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Camera API_Camera Screenspace
+  m_EditorClassIdentifier: 
+  m_displayName: Camera Screenspace
+  m_hierarchyName: Camera API/Camera Screenspace
+  m_context: {fileID: 11400000, guid: 5e256dd5894a3df4b8f2b18168371232, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1014
+  m_overrideMarkdownText: '## Camera Screenspace
+
+
+    Specific pixel-level accuracy
+    mapped to 3D space can be achieved using the `ScreenPointToRayInCamera` method
+    available through `PassthroughCameraUtils`. It can be useful to know specifics
+    about where the user''s peripheral gaze ends (image bounds), or locating items
+    accurately on a sub-image-size basis.
+
+
+    ```csharp
+
+    var ray = PassthroughCameraUtils.ScreenPointToRayInCamera(cameraEye,
+    pixelCenter); // cameraEye is .Left or .Right
+
+    ```
+
+
+    The passed pixel
+    location should be with respect to the Camera''s Screen frame of reference coordinate
+    system, including the resolution scale:
+
+
+    ```csharp
+
+    cameraResolution
+    = PassthroughCameraUtils.GetCameraIntrinsics(m_cachedCameraEye).Resolution;
+
+    ```
+
+
+    So
+    for example, if the captured image resolution is 320x240 and the camera intrinsic
+    resolution is 1280x960, points in the captured image will need to be scaled up
+    by: `1280/320 & 960/240` (4) to have the expected scale in screen space.
+
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.cameratracking/

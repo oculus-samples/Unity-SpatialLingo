@@ -1,0 +1,379 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpatialLingoWarmupShaders
+  m_Shaders:
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: UIE_FORCE_GAMMA
+        passType: 0
+  - first: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 19011, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _OUTPUT_DEPTH
+        passType: 0
+  - first: {fileID: 4800000, guid: 65df88701913c224d95fc554db28381a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e7857e9d0c934dc4f83f270f8447b006, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _BLOOM_HQ _TONEMAP_NEUTRAL
+        passType: 0
+      - keywords: _BLOOM_HQ _TONEMAP_NEUTRAL _USE_FAST_SRGB_LINEAR_CONVERSION
+        passType: 0
+  - first: {fileID: 4800000, guid: 5f1864addb451f54bae8c86d230f736e, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _BLOOM_HQ
+        passType: 0
+  - first: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _NORMALMAP _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS_CASCADE _NORMALMAP _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _NORMALMAP
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _NORMALMAP _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+  - first: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
+    second:
+      variants:
+      - keywords: _SURFACE_TYPE_TRANSPARENT
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 6d4da4baec52af3498939406e5f3f7b0, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _ALPHATEST_ON
+        passType: 0
+      - keywords: _ALPHATEST_ON _SURFACE_TYPE_TRANSPARENT
+        passType: 0
+      - keywords: _SURFACE_TYPE_TRANSPARENT
+        passType: 0
+      - keywords: 
+        passType: 8
+      - keywords: _ALPHATEST_ON
+        passType: 8
+      - keywords: 
+        passType: 13
+  - first: {fileID: -6465566751694194690, guid: 9e44c610188a603488b3c965d471dcdf, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _ALPHATEST_ON
+        passType: 0
+      - keywords: 
+        passType: 8
+      - keywords: _ALPHATEST_ON
+        passType: 8
+  - first: {fileID: 4800000, guid: faff192ad5862624d8a3be26ae4d15d6, type: 3}
+    second:
+      variants:
+      - keywords: LIGHTPROBE_SH
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: c6b0053dfd982364ca7194be30f1d91c, type: 3}
+    second:
+      variants:
+      - keywords: _SELECT_FACIAL_UV_CHANNEL_UV3 _TEST_ENUM_EYE_FRAME_NAMES_DEAD
+        passType: 0
+      - keywords: _TEST_ENUM_EYE_FRAME_NAMES_DEAD
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 022970ad8e5fc024592517fbc7c548b5, type: 3}
+    second:
+      variants:
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 843af23cd9ce71b4aa98a8e21ed8fc8c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: c6205320beaf25644968a9120395a1ad, type: 3}
+    second:
+      variants:
+      - keywords: LIGHTPROBE_SH
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 3481c0a20d27db94cb65e65e6a19f426, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: e1b734cb95fa288408401d3b5c6167db, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
+    second:
+      variants:
+      - keywords: _SURFACE_TYPE_TRANSPARENT
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 39f1e5813451433419396fed37559ad2, type: 3}
+    second:
+      variants:
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 9346ee7dbf987684b86a8c5cb929a82c, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 1fd0c0add1014e349be27442ff000696, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: b895d3431e75dc345a72e171f82bfbea, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 59c6fb2ff3c9fff46bc9f51075540229, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 1ae886d9f16722246a064d11adf291fd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: _ALPHATEST_ON
+        passType: 8
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _ALPHATEST_ON _FORWARD_PLUS
+          _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF _REFLECTION_PROBE_BLENDING
+          _REFLECTION_PROBE_BOX_PROJECTION _SPECULAR_SETUP
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ALPHATEST_ON _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _RECEIVE_SHADOWS_OFF _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+          _SPECULAR_SETUP
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF
+        passType: 13
+  - first: {fileID: 4800000, guid: fe393ace9b354375a9cb14cdbbc28be4, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 2fe255d9bdeb0794e93d364f7ef56e70, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 13
+  - first: {fileID: 4800000, guid: 57c328e70d404164ab9b23ac6fc12df6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: c9921e49de6b27842a9ccad17ba13d09, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 8
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _FORWARD_PLUS _LIGHT_LAYERS
+          _MAIN_LIGHT_SHADOWS _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: 8c14af5319e3b504eae1f0c04fe45a77, type: 3}
+    second:
+      variants:
+      - keywords: _PLANEAXIS_XZ
+        passType: 0
+  - first: {fileID: -6465566751694194690, guid: 320bd14ba2b8d544bb2af754a318a6f5, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: 
+        passType: 8
+  - first: {fileID: -6465566751694194690, guid: 6f22dd25f491a52489b44b379f97e381, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _B_LOAD_COL_TEX
+        passType: 8
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _ALPHATEST_ON _B_LOAD_COL_TEX
+          _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF _REFLECTION_PROBE_BLENDING
+          _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ADDITIONAL_LIGHT_SHADOWS _ALPHATEST_ON _B_LOAD_COL_TEX
+          _FORWARD_PLUS _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS_CASCADE _RECEIVE_SHADOWS_OFF
+          _REFLECTION_PROBE_BLENDING _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _ALPHATEST_ON _B_LOAD_COL_TEX _FORWARD_PLUS
+          _LIGHT_LAYERS _MAIN_LIGHT_SHADOWS _RECEIVE_SHADOWS_OFF _REFLECTION_PROBE_BLENDING
+          _REFLECTION_PROBE_BOX_PROJECTION
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _B_LOAD_COL_TEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS
+          _RECEIVE_SHADOWS_OFF
+        passType: 13
+      - keywords: EVALUATE_SH_VERTEX _B_LOAD_COL_TEX _FORWARD_PLUS _MAIN_LIGHT_SHADOWS_CASCADE
+          _RECEIVE_SHADOWS_OFF
+        passType: 13

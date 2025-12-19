@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API_C# REST API
+  m_EditorClassIdentifier: 
+  m_displayName: C# REST API
+  m_hierarchyName: Llama API/C# REST API
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1015
+  m_overrideMarkdownText: "## C# REST API\n\n<a href=\".\\Packages\\com.meta.utilities.llamaapi/com.meta.utilities.llamaapi/Runtime/Scripts/LlamaRestApi.cs\">LlamaRestApi.cs</a>
+    encapsulates the Llama endpoint requests, converting elements to/from C# objects
+    to URL requests.\n\nThe API is initialized passing the API Key:\n\n```csharp\nvar
+    llama = new LlamaRestApi(api_key);\n```\n\nYou can start a new chat sequence
+    using `llama.StartNewChat(SystemPrompt);` and continue the chat with additional
+    messages. Giving the API more history allows for more conversational based interactions:\n\n```csharp\nvar
+    chat = llama.StartNewChat(\"You are a language assistant.\");\nvar result = await
+    llama.ContinueChat(chat, \"Translate \\\"Cat\\\" from English into Vietnamese.\");\n//
+    eg result: The translation of \"Cat\" from English into Vietnamese is \"M\xE8o\".\n```\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

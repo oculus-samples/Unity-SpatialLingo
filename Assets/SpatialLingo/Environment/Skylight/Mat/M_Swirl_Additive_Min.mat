@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Swirl_Additive_Min
+  m_Shader: {fileID: 4800000, guid: 59c6fb2ff3c9fff46bc9f51075540229, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlowTex:
+        m_Texture: {fileID: 2800000, guid: 5e6ca8f19188f064ebdcc1a69545d8f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 2eb1eb7511dec444ca24cf03df480ae0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Aniso: 0.806
+    - _EnvironmentDepthBias: 0.5
+    - _FeatherOS: 3.8
+    - _FlowSpeed: 0.6
+    - _FlowStr: 0.894
+    - _GlowPow: 2.66
+    - _GlowPower: 2.81
+    - _InnerRadius: 0.43
+    - _Intensity: 4.15
+    - _NoiseAmp: 0.553
+    - _NoiseScale: 10
+    - _NoiseSpeed: 0.6
+    - _NoiseTile: 9
+    - _PlaneMode: 0
+    - _RadTile: 1
+    - _RadiusOS: 0.46
+    - _Softness: 0.027
+    - _StencilRef: 1
+    - _StripeCon: 1.54
+    - _StripePow: 5.06
+    - _SwirlSpeed: 2.01
+    - _SwirlStrength: 2.09
+    - _Thickness: 0.032
+    m_Colors:
+    - _Color: {r: 1, g: 0.96654063, b: 0.63529414, a: 1}
+    - _InnerColor: {r: 0.51729935, g: 0.24746348, b: 0.6320754, a: 1}
+    - _OuterColor: {r: 0.27660757, g: 0.22828408, b: 0.8490566, a: 1}
+    - _Scroll: {r: 0.02, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

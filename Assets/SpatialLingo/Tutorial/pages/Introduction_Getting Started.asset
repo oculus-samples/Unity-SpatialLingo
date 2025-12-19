@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction_Getting Started
+  m_EditorClassIdentifier: 
+  m_displayName: Getting Started
+  m_hierarchyName: Introduction/Getting Started
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1004
+  m_overrideMarkdownText: "# Getting Started\n\n\n## Getting The Code\n\nFirst, ensure
+    you have Git LFS installed by running this command:\n\n```sh\ngit lfs install\n```\n\nThen,
+    clone this repo using the \"Code\" button above, or this command:\n\n```sh\ngit
+    clone https://github.com/oculus-samples/Unity-SpatialLingo.git\n```\n\n\n###
+    Application Settings\n\nChange the contents of <a href=\"./Assets/StreamingAssets/spatialLingo_settings.json\">Assets/StreamingAssets/spatialLingo_settings.json</a>
+    to desired setup:\n\n```\n{\n    \"llama\": {\n        \"api_key\": \"<REDACTED>\"\n   
+    }\n}\n```\n\n\n## How to run the project in Unity\n\n1. Make sure you're using
+    Unity 6000.0.51f1 or newer\n2. Load the <a href=\"./Assets/SpatialLingo/Scenes/MainScene.unity\">Assets/SpatialLingo/Scenes/MainScene.unity</a>
+    scene\n3. Open the Meta XR Simulator\n4. Start Play Mode\n\n"
+  m_overrideMarkdownRoot: ./

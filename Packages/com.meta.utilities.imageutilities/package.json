@@ -1,0 +1,7 @@
+{
+    "name": "com.meta.utilities.imageutilities",
+    "version": "1.0.0",
+    "displayName": "Meta Image Utilities",
+    "description": "Components for Image Operations",
+    "hideInEditor": false
+}

@@ -1,0 +1,7 @@
+{
+    "name": "com.meta.utilities.cameratracking",
+    "version": "1.0.0",
+    "displayName": "Meta Camera Tracking Utilities",
+    "description": "Core components for camera tracking",
+    "hideInEditor": false
+}

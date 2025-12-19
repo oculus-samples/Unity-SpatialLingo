@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API
+  m_EditorClassIdentifier: 
+  m_displayName: Llama API
+  m_hierarchyName: Llama API/Llama API
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1010
+  m_overrideMarkdownText: '# Meta Llama API
+
+
+    Llama is a Large Language Model
+    AI, developed by Meta.
+
+
+
+
+
+    While Llama can be used to accomplish many goals,
+    the ones outlined here are targeted toward common use cases:
+
+
+    - Ask questions,
+    e.g.: ''What is a synonym for chair?''
+
+    - Make queries about images, e.g.:
+    ''What is in this image: {image}''
+
+    - Translate data, e.g.: ''Translate "Hello"
+    into Vietnamese.''
+
+    - Format data or answers into JSON
+
+
+    Getting the
+    desired output from an AI relies mostly on constructing "prompts" (questions
+    with context) worded in particular ways to generate suitable responses.
+
+
+    There
+    is a Meta provided Llama API service available to interface with various models.
+    Multiple models are available, e.g.: Llama-3.3, and Llama-4, with different variations
+    & targeted purposes.
+
+
+    For more information: <a href="https://llama.developer.meta.com/docs/overview/">`Llama
+    API Docs`</a>
+
+
+
+    ### Getting Started
+
+
+    Create an Account at: <a href="https://llama.developer.meta.com/">`Llama
+    API`</a>.
+
+
+    Create an API Key to pass in requests: <a href="https://llama.developer.meta.com/api-keys/">`API
+    Keys`</a>.
+
+
+
+    ## Common Use Cases
+
+
+
+    ### Accurate Object Description
+
+
+    The
+    classification from object detection is a coarse (and sometimes incorrect) umbrella
+    term for detected objects. Passing a cropped image of the subject item to Llama,
+    the scene description is able to provide a more accurate and descriptive summary
+    of the item.
+
+
+
+    ### Generating Lesson Data (Word Clouds)
+
+
+    Passing a
+    descriptive noun along with an image of the corresponding object to the Llama
+    scene description service, it is able to return a rich set of nouns, adjectives,
+    and verbs.
+
+
+
+    ### Translation
+
+
+    Llama is used to translate the scene
+    description results into both the user''s native language and the target language,
+    to facilitate translation and language learning.
+
+
+
+    ### Speech Evaluation
+
+
+    Using
+    a transcription of the user''s voice, Llama is used to evaluate a user''s response
+    using multiple criteria, including checking for the presence of specific words
+    and parts of speech (nouns, verbs, and adjectives).
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

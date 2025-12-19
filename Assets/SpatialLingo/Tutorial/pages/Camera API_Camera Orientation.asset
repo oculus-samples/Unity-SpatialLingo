@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Camera API_Camera Orientation
+  m_EditorClassIdentifier: 
+  m_displayName: Camera Orientation
+  m_hierarchyName: Camera API/Camera Orientation
+  m_context: {fileID: 11400000, guid: 5e256dd5894a3df4b8f2b18168371232, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1013
+  m_overrideMarkdownText: '## Camera Orientation
+
+
+    How the camera is oriented
+    in 3D space, the `Pose`, is also available, using:
+
+
+    ```csharp
+
+    var cachedCameraEye
+    = PassthroughCameraEye.Left;
+
+    var cachedCameraPose = PassthroughCameraUtils.GetCameraPoseInWorld(cachedCameraEye);
+
+    //
+    cachedCameraPose is a Pose struct, with a .position and .rotation in world space
+
+    ```
+
+
+    This
+    value can be used to associate images or objects in an image to a location in
+    3D space.
+
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.cameratracking/

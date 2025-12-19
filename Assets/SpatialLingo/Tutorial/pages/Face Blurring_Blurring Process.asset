@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Face Blurring_Blurring Process
+  m_EditorClassIdentifier: 
+  m_displayName: Blurring Process
+  m_hierarchyName: Face Blurring/Blurring Process
+  m_context: {fileID: 11400000, guid: 400cf6a22014d2b4c80f5a0b61c2ba92, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1017
+  m_overrideMarkdownText: "## Blurring Process\n\nThe `FaceBlur.BlurFaces` method
+    orchestrates the complete detection and blurring pipeline:\n\n```csharp\npublic
+    static async Awaitable BlurFaces(\n    Model model,\n    BackendType backend,\n   
+    Texture inputTexture,\n    RenderTexture targetTexture,\n    bool useNMS,\n   
+    int blurResolution = 32)\n```\n\n\n### Pipeline Steps\n\n1. **Texture to Tensor**:
+    Input texture is converted to a tensor with BGRA channel swizzle (required by
+    model)\n\n2. **Tensor Readback**: The tensor is copied to CPU memory for inference\n\n3.
+    **Iterative Inference**: Work is spread across frames using `ScheduleIterable`,
+    yielding after each millisecond to prevent blocking:\n\n   ```csharp\n   while
+    (iterable.MoveNext())\n   {\n       if (time.Elapsed.TotalMilliseconds > 1.0f)\n      
+    {\n           await Awaitable.NextFrameAsync();\n           time.Restart();\n      
+    }\n   }\n   ```\n\n4. **Result Processing**: Face rectangles are extracted and
+    filtered\n\n5. **Blur Rendering**: Detected faces are obscured in the output
+    texture\n\n\n### Blur Effect\n\nThe blur is implemented as a bilinear pixelation
+    effect with a default resolution of 32 pixels:\n\n1. Create a low-resolution
+    copy of the input (scaled so the longest dimension is 32 pixels)\n2. Copy the
+    original image to the target render texture\n3. For each detected face, draw
+    a quad sampling from the low-res texture\n\nThis produces a recognizable pixelation
+    that effectively anonymizes faces while being computationally inexpensive.\n\n```csharp\nvar
+    scale = (float)blurResolution / Mathf.Max(inputTexture.width, inputTexture.height);\nvar
+    lowResTexture = RenderTexture.GetTemporary(lowResWidth, lowResHeight, 0, targetTexture.format);\nlowResTexture.filterMode
+    = FilterMode.Bilinear;\n```\n\nThe rendering uses a `CommandBuffer` to efficiently
+    batch all face blur operations into a single GPU submission.\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.objectclassifier\Documentation~/

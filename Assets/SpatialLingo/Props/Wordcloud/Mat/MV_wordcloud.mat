@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MV_wordcloud
+  m_Shader: {fileID: -6465566751694194690, guid: 39f1e5813451433419396fed37559ad2, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: 39f1e5813451433419396fed37559ad2, type: 3}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2460
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Tiled_Painterly_Texture:
+        m_Texture: {fileID: 2800000, guid: 666712925ed46f848a150671f0a45f13, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Additive_Height: 1.58
+    - _Additive_Width: 1.33
+    - _Edge_Glow_Intensity: 0.756
+    - _Edge_Glow_Power: 0.96
+    - _Emissive_Intensity: 3.74
+    - _Emissive_intensity: 0
+    - _Enable_MR_Occlusion_Culling: 1
+    - _Fresnel_Power: 3.62
+    - _Glow_Amount: 0
+    - _MR_Environment_Depth_Bias: 0.25
+    - _Normal_Strength: 0
+    - _QueueControl: 1
+    - _Secondary_Color_Offset: -90
+    - _Smoothness: 0.75
+    - _Thickness_Override: 1
+    m_Colors:
+    - _Color: {r: 0.07005254, g: 0.13836467, b: 0.105835095, a: 1}
+    - _Emissive_Color: {r: 1.8867924, g: 0.8070072, b: 0, a: 1}
+    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Highlight_Paint_Color: {r: 0.19323613, g: 0.08929622, b: 0.8113208, a: 0}
+    - _Max_Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Primary_Paint_Color: {r: 0.6603774, g: 0.28450215, b: 0.49658993, a: 1}
+    - _Vector3: {r: 1, g: 1, b: 1, a: 0}
+    - _Xscale: {r: -2, g: 2, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &8685014837667188089
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 10

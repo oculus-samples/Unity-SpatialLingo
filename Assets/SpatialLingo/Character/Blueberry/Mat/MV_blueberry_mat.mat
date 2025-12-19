@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MV_blueberry_mat
+  m_Shader: {fileID: -6465566751694194690, guid: c6b0053dfd982364ca7194be30f1d91c, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: c6b0053dfd982364ca7194be30f1d91c, type: 3}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _SELECT_FACIAL_UV_CHANNEL_UV3
+  m_InvalidKeywords:
+  - _SELECT_FACIAL_UV_CHANNEL_TEXCOORD3
+  - _SELECT_FACIAL_UV_CHANNEL_UV03
+  - _TESTENUM_DEAD
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2450
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AO:
+        m_Texture: {fileID: 2800000, guid: 68401be7729c7064194247c66b17b41f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Base_Color:
+        m_Texture: {fileID: 2800000, guid: 5128dc9f43318a045b16fdd88443751c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Eye_Face_Flip_Book:
+        m_Texture: {fileID: 2800000, guid: b0cac20bec6897445867d34d9c7abb66, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Face_Flip_Book:
+        m_Texture: {fileID: 2800000, guid: f011a2f63d369f04ab7d21308054fdcb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mouth_Face_Flip_Book:
+        m_Texture: {fileID: 2800000, guid: 10ce703c4f4c81e47b83bc5f0b8ab87e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Enable_Face_Sprites: 1
+    - _Environment_Depth_Bias: 0.1
+    - _Eye_Frame_Number: 1
+    - _Face_Frame_Number: 2.38
+    - _Golden_FX_Amount: 0
+    - _Golden_FX_Emissive_Amount: 0
+    - _Golden_FX_Rim_Choke: 1.1
+    - _Mouth_Frame_Number: 3.73
+    - _QueueControl: 1
+    - _Rim_Light_Choke: 3
+    - _Rim_Light_Intensity: 1
+    - _Rim_Light_Size: 2
+    - _SELECT_FACIAL_UV_CHANNEL: 4
+    - _Saturation: 1
+    - _TESTENUM: 0
+    - _Use_Gradient_Use_Color: 0
+    m_Colors:
+    - _Ambient_Color: {r: 0.19217986, g: 0.19776772, b: 0.2578616, a: 0}
+    - _BaseColor: {r: 1, g: 0.38431376, b: 1, a: 1}
+    - _Eye_Texture_Tiles: {r: 4, g: 4, b: 0, a: 0}
+    - _Golden_FX_Color: {r: 1, g: 0.7137255, b: 0, a: 1}
+    - _Lighting_Contrast: {r: 0.8, g: 6.82, b: 0, a: 0}
+    - _Lighting_Range: {r: 0, g: 2.08, b: 0, a: 0}
+    - _Mouth_Color: {r: 0.15155639, g: 0.40426543, b: 0.61006284, a: 0}
+    - _Mouth_Texture_Tiles: {r: 4, g: 4, b: 0, a: 0}
+    - _Rim_Light_Color: {r: 0.14901961, g: 0.1971509, b: 0.98039216, a: 1}
+    - _Shadow_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Spec_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &4724438254869122395
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 10

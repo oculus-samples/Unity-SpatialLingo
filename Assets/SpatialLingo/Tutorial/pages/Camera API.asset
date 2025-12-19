@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Camera API
+  m_EditorClassIdentifier: 
+  m_displayName: Camera API
+  m_hierarchyName: Camera API/Camera API
+  m_context: {fileID: 11400000, guid: 5e256dd5894a3df4b8f2b18168371232, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1007
+  m_overrideMarkdownText: '# Meta Camera Tracking Utility
+
+
+
+
+
+    This package provides
+    interfaces for the Passthrough Camera API (PCA) for Meta Headset Unity projects.
+    It offers interfaces to camera-related resources and operations.
+
+
+    For more
+    information on PCA: <a href="https://developers.meta.com/horizon/documentation/unity/unity-pca-overview/">`Unity
+    PCA Overview`</a>.
+
+
+    For more information on Android Camera2 API: <a href="https://developer.android.com/media/camera/camera2">`Camera2
+    Overview`</a>.
+
+
+    For more information on Passthrough: <a href="https://developers.meta.com/horizon/documentation/unity/unity-passthrough/">`Unity
+    Passthrough`</a>.
+
+
+
+    ## Features
+
+
+    This package utilizes several features
+    related to passthrough camera:
+
+
+    - Requesting Permission for camera and scene
+    data
+
+    - Camera Image access
+
+    - Camera Orientation access
+
+    - Depth
+    Estimation
+
+
+
+    ## Setup
+
+
+    The Android manifest for projects using this
+    package has been updated to allow access for several features:
+
+
+    ```xml
+
+    <uses-feature
+    android:name="com.oculus.feature.PASSTHROUGH" android:required="true" />
+
+    <uses-permission
+    android:name="com.oculus.permission.USE_SCENE" android:required="true" />
+
+    <uses-permission
+    android:name="horizonos.permission.HEADSET_CAMERA" />
+
+    ```
+
+
+    Permission
+    for camera access is facilitated using the `PassthroughCameraPermissions` class,
+    which encapsulates the specifics including requests and callbacks from the `Permission`
+    Android API.
+
+
+    ```csharp
+
+    // Check if permissions are already granted
+
+    PassthroughCameraPermissions.IsAllCameraPermissionsGranted()
+
+
+    //
+    Register Callback
+
+    PassthroughCameraPermissions.AllCameraPermissionGranted
+    += OnAllCameraPermissionGranted;
+
+
+    // Start Request process
+
+    PassthroughCameraPermissions.AskCameraPermissions();
+
+    ```
+
+
+
+    ##
+    Usage Example
+
+
+    A comprehensive example demonstrating how to request permission,
+    set a target resolution, access the camera image as a texture, and display the
+    image:
+
+
+    ```csharp
+
+    // Reference the left or right eye camera
+
+    var
+    cameraEye = PassthroughCameraEye.Left;
+
+
+    // Get camera pose = position &
+    rotation
+
+    var cameraPose = PassthroughCameraUtils.GetCameraPoseInWorld(cameraEye);
+
+
+    //
+    Get camera resolution
+
+    var cameraResolution = PassthroughCameraUtils.GetCameraIntrinsics(cameraEye).Resolution;
+
+
+    //
+    Get the center of a pixel in camera image coordinates
+
+    int locX, locY;
+
+    //
+    ...
+
+    var center = new Vector2Int(locX, locY);
+
+
+    // Get a ray through
+    the screen into the world
+
+    var ray = PassthroughCameraUtils.ScreenPointToRayInCamera(cameraEye,
+    center);
+
+
+    // Get permissions
+
+    PassthroughCameraPermissions.AskCameraPermissions();
+
+    ```
+
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.cameratracking/

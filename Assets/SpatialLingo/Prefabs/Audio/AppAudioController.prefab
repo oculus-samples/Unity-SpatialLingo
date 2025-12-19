@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3530385273496423144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6769885431090384286}
+  - component: {fileID: 2383671392192487232}
+  m_Layer: 0
+  m_Name: AppAudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6769885431090384286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530385273496423144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2383671392192487232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530385273496423144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a75aad31dfaf45a7b2bc1662cd5d8b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_soundDefinitions:
+  - SoundEffect: 0
+    Clips:
+    - {fileID: 8300000, guid: 3063a4ccb4ce24a96890c7892e67d66d, type: 3}
+  - SoundEffect: 1
+    Clips:
+    - {fileID: 8300000, guid: 3cc9142fdfa2e2b44a180ad0b4577299, type: 3}
+  - SoundEffect: 2
+    Clips:
+    - {fileID: 8300000, guid: 549ece0812f985f42a97877df648a1c3, type: 3}
+  - SoundEffect: 3
+    Clips:
+    - {fileID: 8300000, guid: e5d7370c01fb83c49a54fe54aae9eeac, type: 3}
+  - SoundEffect: 4
+    Clips:
+    - {fileID: 8300000, guid: c30c5399b071a004e8184e26022a734a, type: 3}
+  - SoundEffect: 5
+    Clips:
+    - {fileID: 8300000, guid: abd15f3248027d24aa5d1bd0a645bffd, type: 3}
+  - SoundEffect: 6
+    Clips:
+    - {fileID: 8300000, guid: 1d27157edc745ad408d9828c884ea104, type: 3}
+    - {fileID: 8300000, guid: 7d072e1f1b0eae842819cc44b2156f98, type: 3}
+  - SoundEffect: 7
+    Clips:
+    - {fileID: 8300000, guid: 222b6f1915d69d84386f42a0d611a2ec, type: 3}
+    - {fileID: 8300000, guid: ba8e70a26cd3b2c4ba57318f68016a1f, type: 3}
+    - {fileID: 8300000, guid: b0ca37c7d3e065948aef0134e23b7a22, type: 3}
+  - SoundEffect: 8
+    Clips:
+    - {fileID: 8300000, guid: 419f4654707a6794081873a90d6aac3e, type: 3}
+    - {fileID: 8300000, guid: bff95a126a7212e4eb09fcd660459775, type: 3}
+    - {fileID: 8300000, guid: d4fdc3bbef7eb6a459126a8a8804024f, type: 3}
+  - SoundEffect: 9
+    Clips:
+    - {fileID: 8300000, guid: 5120f2f2a0b50004589e6093de03bac9, type: 3}
+  - SoundEffect: 10
+    Clips:
+    - {fileID: 8300000, guid: cba918196783a2348b8dc2b7fc602de4, type: 3}
+  - SoundEffect: 11
+    Clips:
+    - {fileID: 8300000, guid: 3e4aa7919d3dee94091c4fcb25c8ff43, type: 3}
+  - SoundEffect: 12
+    Clips:
+    - {fileID: 8300000, guid: dd15ce7ad00944ab09c7253c13b49093, type: 3}
+    - {fileID: 8300000, guid: 6ccaa4a3b63d84c6d93fa0a3cd264630, type: 3}
+    - {fileID: 8300000, guid: b6b7a602b30654e84ac893697f83b585, type: 3}
+  - SoundEffect: 13
+    Clips:
+    - {fileID: 8300000, guid: 9500d5e125a2544e692650176d6367b1, type: 3}
+  - SoundEffect: 14
+    Clips:
+    - {fileID: 8300000, guid: 5868a868a074f4a9fb3cb3d14327eb0e, type: 3}
+  - SoundEffect: 15
+    Clips:
+    - {fileID: 8300000, guid: ce85188cbbc1acc4698005ee1a930461, type: 3}
+    - {fileID: 8300000, guid: a412a10cb71b7614b86ba9a10c594bd6, type: 3}
+    - {fileID: 8300000, guid: 2e74714d68abec943a2d418650c18678, type: 3}
+    - {fileID: 8300000, guid: 33933f9ca610ebe468580ab5057490e0, type: 3}
+  - SoundEffect: 16
+    Clips:
+    - {fileID: 8300000, guid: 68d1e01112f6af44da5f3e3f64542512, type: 3}
+  - SoundEffect: 17
+    Clips:
+    - {fileID: 8300000, guid: b3922facf46b36f4f90d281230778df7, type: 3}
+  - SoundEffect: 18
+    Clips:
+    - {fileID: 8300000, guid: 0f48600957e57084dae470539134ee24, type: 3}
+  - SoundEffect: 19
+    Clips:
+    - {fileID: 8300000, guid: 7ead362ff0a7f804682f54d129356ce2, type: 3}
+  - SoundEffect: 20
+    Clips:
+    - {fileID: 8300000, guid: 97d8d15c1d7114d77b0590221ebab999, type: 3}
+  - SoundEffect: 21
+    Clips:
+    - {fileID: 8300000, guid: e4748bf5c221c8a47bb6199aa4f208a6, type: 3}
+    - {fileID: 8300000, guid: 0f51776855140504099d9a76d49f65d7, type: 3}
+    - {fileID: 8300000, guid: 178f2f3ee39e66a459b4587a6b575cb8, type: 3}
+    - {fileID: 8300000, guid: a07afb5cf051bad4f8fb30d3e9c874a7, type: 3}
+    - {fileID: 8300000, guid: 80630457736147843bcef057e297e95e, type: 3}
+    - {fileID: 8300000, guid: 2268801d0fde6954f8593d687de4f8ca, type: 3}
+    - {fileID: 8300000, guid: fb6533cb88c80704aaa25bdbbdf3c1b6, type: 3}
+    - {fileID: 8300000, guid: e0a1e845dd74ec74bb24e6c1e07126fc, type: 3}
+  - SoundEffect: 22
+    Clips:
+    - {fileID: 8300000, guid: 9213df1aed3793443a0319554b582fa3, type: 3}
+    - {fileID: 8300000, guid: 5d879747a59da7e4c85d6e6eb06bbf76, type: 3}
+    - {fileID: 8300000, guid: 51e504a7f5712e5459240c694053ee55, type: 3}

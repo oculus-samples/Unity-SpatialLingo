@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SpatialLingo/Scenes/LoadingScene.unity
+    guid: a7922a60b1b914d8dbc284c925af24c0
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/SelectScene.unity
+    guid: 2f561e8929eaf854a8ee8b0cd4423b06
+  - enabled: 1
+    path: Assets/SpatialLingo/Scenes/MainScene.unity
+    guid: 2a6992bce03574d689c5272aad919cc1
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/ArtScene.unity
+    guid: 7d0e8619fc8aa490982d197550776ba6
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/GymScene.unity
+    guid: e560b7e50285c428d8c70321fd42b8fe
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/ObjectRecognitionSample.unity
+    guid: e087e1f67e57a4e18a004fea6090312f
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/CameraImageSample.unity
+    guid: e0d92345dc06e4858a070d8cba2c4fd0
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/LlamaAPISample.unity
+    guid: ce1037e09885e4e47a9c728aa44a16b6
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/AssistantAISample.unity
+    guid: 0fce23a9145344b93a16a2ea520e1cba
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/SpeechToText.unity
+    guid: 8a4b1512bf21647d3b48bdf9930baf0d
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/TextToSpeech.unity
+    guid: bfb3d946993ac4c36ac18879bed55b07
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/ActivitySample.unity
+    guid: 44c0da3cdd1cb43859548c5d035b7738
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/CharacterSample.unity
+    guid: 4dd1046b701fb49848baed4af22121a1
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/WordCloudSample.unity
+    guid: b262ab2ad1d994fceaee4dd9d3b12285
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/AudioSample.unity
+    guid: d82ca895bef664ff4beb3a68d1edb0a8
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/VoiceSynthesizeSample.unity
+    guid: 78de21dbbbfa7498eb7a1c26daa181a6
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/PassthroughHighlighting.unity
+    guid: 1a3be5ffaf85642caa5922faf2e5ee21
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/TranscriptionSample.unity
+    guid: b086cc4e15ae241d9bb4446de075cbc1
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/LanguageSelectSample.unity
+    guid: ad75791a9042048858c5602517f94e5d
+  - enabled: 0
+    path: Assets/SpatialLingo/Scenes/Samples/FindSpawnPositionsSample.unity
+    guid: 4bbe366c234a643a68c69f6a13aadcb0
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 9cf0ec1af27124ca9bb738b15a3c6a92, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 471c72f7be7ba42179bfc031eddfc5f3, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 6153789228f8b4129a0e8b54950807f7, type: 2}
+  m_UseUCBPForAssetBundles: 0

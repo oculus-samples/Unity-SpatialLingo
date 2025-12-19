@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API_Configuration
+  m_EditorClassIdentifier: 
+  m_displayName: Configuration
+  m_hierarchyName: Llama API/Configuration
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1014
+  m_overrideMarkdownText: "## Configuration\n\nBecause querying the Llama service
+    requires a unique key, the value needs to be configurable. The key should be
+    stored securely and passed when initializing the API client. For example in a
+    settings file:\n\n```json\n{\n    \"llama\": {\n        \"api_key\": \"YOUR_UNIQUE_LLAMA_API_KEY_GOES_HERE\"\n   
+    }\n}\n```\n\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

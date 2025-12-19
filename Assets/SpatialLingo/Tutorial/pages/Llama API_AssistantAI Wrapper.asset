@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Llama API_AssistantAI Wrapper
+  m_EditorClassIdentifier: 
+  m_displayName: AssistantAI Wrapper
+  m_hierarchyName: Llama API/AssistantAI Wrapper
+  m_context: {fileID: 11400000, guid: 1774392562d04fd42b9b82ddc0fbb723, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1016
+  m_overrideMarkdownText: '## AssistantAI Wrapper
+
+
+    <a href="./Assets/SpatialLingo/Scripts/AI/AssistantAI.cs">AssistantAI.cs</a>
+    encapsulates the prompts, chats, and data passing, JSON parsing necessary to
+    communicate with Llama and receive C# objects.
+
+
+    The class is initialized
+    by passing an instance of the LlamaRestApi:
+
+
+    ```csharp
+
+    var assistantAI
+    = new AssistantAI(llamaAPI);
+
+    ```
+
+
+    By abstracting the details away,
+    the Assistant AI interface allows for more targeted usage. As an example, word
+    clouds are generated from a single classification & cropped camera image (from
+    an object recognition pass). The result is a rich description of the scene with
+    nouns, verbs, and adjectives.
+
+
+    ```csharp
+
+    // Definition (<a href="./Assets/SpatialLingo/Scripts/AI/AssistantAI.cs">AssistantAI.cs</a>):
+
+    public
+    async Task<WordCloudResult> GenerateWordCloudData(SupportedLanguage userLanguage,
+    SupportedLanguage targetLanguage, string classification, string imageString,
+    string context = null)
+
+
+    // Call:
+
+    var wordCloudResult = await m_assistantAI.GenerateWordCloudData(userLanguage,
+    targetLanguage, classification, imageString);
+
+
+    // wordCloudResult contains
+    parts of speech for presentation to the user during gameplay
+
+    ```
+
+
+    The
+    class includes helper functions, such as converting a texture into a base64 encoded
+    string that is needed for Llama to perform image sensing:
+
+
+    ```csharp
+
+    //
+    Definition (<a href="./Assets/SpatialLingo/Scripts/AI/AssistantAI.cs">AssistantAI.cs</a>):
+
+    private
+    string GetSourceImageAsString(Texture2D textureImage, EncodeImageType encodeType
+    = EncodeImageType.JPG)
+
+
+    // Call:
+
+    var imageString = GetSourceImageAsString(imageTexture);
+
+    ```
+
+
+    Other
+    helper functions exist, such as automatically scaling images down to make more
+    optimal requests to help minimize network traffic:
+
+
+    ```csharp
+
+    // Definition
+    (<a href="./Assets/SpatialLingo/Scripts/AI/AssistantAI.cs">AssistantAI.cs</a>):
+
+    public
+    string GetNetworkSafeImageString(Texture2D imageSource)
+
+
+    // Call:
+
+    var
+    imageString = assistantAI.GetNetworkSafeImageString(croppedImage);
+
+    ```
+
+
+'
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

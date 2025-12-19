@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Introduction_Sample Scenes
+  m_EditorClassIdentifier: 
+  m_displayName: Sample Scenes
+  m_hierarchyName: Introduction/Sample Scenes
+  m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1008
+  m_overrideMarkdownText: '# Sample Scenes
+
+
+    Sample scenes can be found at <a
+    href="./Assets/SpatialLingo/Scenes">Assets/SpatialLingo/Scenes</a>.
+
+
+
+    ##
+    Voice Transcription Scene
+
+
+    ![alt text](./Documentation/Images/SampleScenes/VoiceTranscription.gif){style="width:300"}
+
+
+    To
+    run, open <a href="./Assets/SpatialLingo/Scenes/Samples/WordCloudSample.unity">WordCloudSample.unity</a>
+    and enter play mode with the simulator. Click the "Activate Microphone" button
+    to start transcription thorugh your microphone.
+
+
+'
+  m_overrideMarkdownRoot: ./

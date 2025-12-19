@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4510294d23d964fe59443526f1ca7c4b, type: 3}
+  m_Name: Face Blurring
+  m_EditorClassIdentifier: 
+  m_displayName: Face Blurring
+  m_hierarchyName: Face Blurring/Face Blurring
+  m_context: {fileID: 11400000, guid: 400cf6a22014d2b4c80f5a0b61c2ba92, type: 2}
+  m_markdownFile: {fileID: 0}
+  m_priority: 1012
+  m_overrideMarkdownText: "# Face Detection and Blurring\n\nFace blurring provides
+    privacy protection by automatically detecting and anonymizing faces in camera
+    images. This feature uses a neural network to locate faces and applies a pixelation
+    blur effect to obscure them. This is used in the Spatial Lingo demo to protect
+    user privacy when submitting an image to Llama API for analysis.\n\n\n## RetinaFace
+    Model\n\nThe face detection system uses RetinaFace, a robust single-stage face
+    detector based on the ResNet50 architecture. RetinaFace performs multi-scale
+    face detection using anchor boxes at different feature pyramid levels.\n\nFor
+    more information on RetinaFace, visit: <a href=\"https://arxiv.org/abs/1905.00641\">`RetinaFace
+    Whitepaper`</a>.\n\nThe specific model used in this project is available under
+    MIT license: <a href=\"https://storage.openvinotoolkit.org/repositories/open_model_zoo/public/2022.1/retinaface-resnet50-pytorch/\">`OpenVINO
+    RetinaFace Model`</a>.\n\n\n### Model Architecture\n\nThe model expects a 640x640
+    pixel input image with BGR channel ordering. Pixel values are normalized by scaling
+    to 0-255 range and subtracting channel means `[104, 117, 123]` (standard values
+    expected by the model).\n\nThe model uses anchor-based detection with three feature
+    pyramid levels:\n\n- **Level 1**: Anchor sizes [16, 32] with step 8 \u2014 detects
+    small faces\n- **Level 2**: Anchor sizes [64, 128] with step 16 \u2014 detects
+    medium faces\n- **Level 3**: Anchor sizes [256, 512] with step 32 \u2014 detects
+    large faces\n\nFor each anchor, the model outputs bounding box coordinates and
+    confidence scores, which are decoded using variance values `[0.1, 0.2]` to produce
+    final face rectangles.\n\n\n## Unity Inference Engine\n\nThe RetinaFace model
+    is loaded as a `.sentis` file and executed using Unity's Inference Engine. The
+    model can be pre-compiled in the editor using the context menu option \"Compile
+    and save model\" on the `FaceDetection` component, or compiled at runtime from
+    the source `.onnx` model.\n\nFor more information on the Unity Inference Engine
+    (Sentis), visit: <a href=\"https://docs.unity3d.com/Packages/com.unity.ai.inference@2.3/manual/index.html\">`Unity
+    Inference Engine Package`</a>.\n\n\n### Model Compilation\n\nThe `FaceDetection.LoadAndCompileModel()`
+    method constructs a functional graph that:\n\n1. Adjusts input pixels (scales
+    by 255, subtracts BGR means)\n2. Runs the source model forward pass\n3. Decodes
+    bounding boxes from anchor-relative coordinates\n4. Optionally applies Non-Maximum
+    Suppression (NMS)\n\nModel weights can be quantized to Float16 or Uint8 to reduce
+    memory usage.\n\n\n## Key Classes\n\n| Class | Description |\n|-------|-------------|\n|
+    `FaceDetection` | MonoBehaviour that manages model loading and provides the `RunBlurring()`
+    entry point |\n| `FaceBlur` | Static utility class containing the `BlurFaces`
+    pipeline and blur rendering logic |\n| `QuestCPUBackend` | Custom inference backend
+    with thread-limited convolution for Quest hardware |\n\n\n## Usage Example\n\n```csharp\n//
+    Get reference to the FaceDetection component\n[SerializeField] private FaceDetection
+    faceDetection;\n\n// Assign the input texture\nfaceDetection.InputTexture = capturedImage;\n\n//
+    Run the blurring pipeline (async)\nRenderTexture blurredResult = await faceDetection.RunBlurring();\n\n//
+    Use the blurred result\noutputDisplay.texture = blurredResult;\n```\n"
+  m_overrideMarkdownRoot: .\Packages\com.meta.utilities.objectclassifier\Documentation~/
