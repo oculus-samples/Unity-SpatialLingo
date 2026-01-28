@@ -24,6 +24,7 @@ namespace Meta.Utilities.CameraTracking
         };
 
         public static event Action AllCameraPermissionGranted;
+        public static event Action CameraPermissionCompleted;
 
         public static readonly string[] CameraPermissions =
         {
@@ -50,6 +51,7 @@ namespace Meta.Utilities.CameraTracking
                 HasCameraPermission = true;
                 PCD.DebugMessage(LogType.Log, "PCA: All camera permissions granted.");
                 AllCameraPermissionGranted?.Invoke();
+                CameraPermissionCompleted?.Invoke();
             }
             else
             {
@@ -79,6 +81,8 @@ namespace Meta.Utilities.CameraTracking
                 HasCameraPermission = true;
                 AllCameraPermissionGranted?.Invoke();
             }
+
+            CameraPermissionCompleted?.Invoke();
         }
 
         /// <summary>
@@ -90,6 +94,7 @@ namespace Meta.Utilities.CameraTracking
             PCD.DebugMessage(LogType.Warning, $"PCA: Permission {permissionName} Denied");
             HasCameraPermission = false;
             s_askedOnce = false;
+            CameraPermissionCompleted?.Invoke();
         }
 
         public static bool IsAllCameraPermissionsGranted() => CameraPermissions.All(Permission.HasUserAuthorizedPermission);

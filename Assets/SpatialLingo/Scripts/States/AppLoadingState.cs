@@ -28,6 +28,7 @@ namespace SpatialLingo.States
         private static bool HasSessionConsent { get; set; }
 
         [SerializeField] private ConsentUI m_consentUI;
+        [SerializeField] private PermissionUI m_permissionUI;
         [SerializeField] private bool m_perSessionConsent = true;
         [SerializeField] private GameObject m_fixedDisplay;
         [SerializeField] private string m_collectionStreamingAssetsLoadPath;
@@ -48,7 +49,7 @@ namespace SpatialLingo.States
             m_headsetTransform = headsetTransform;
             m_isInitialized = true;
 
-            RequestCameraPermissionsIfNeeded();
+            StartPermissionFlow();
         }
 
         private void CheckConsentAfterPermissions()
@@ -114,6 +115,7 @@ namespace SpatialLingo.States
                 return;
             }
             PassthroughCameraPermissions.AllCameraPermissionGranted += OnAllCameraPermissionGranted;
+            PassthroughCameraPermissions.CameraPermissionCompleted += OnCameraPermissionCompleted;
             PassthroughCameraPermissions.AskCameraPermissions();
         }
 
@@ -121,7 +123,7 @@ namespace SpatialLingo.States
         {
             if (MicrophonePermissions.IsPermissionGranted())
             {
-                CheckConsentAfterPermissions();
+                CheckPermissionsGrantedOrShowPopup();
                 return;
             }
             MicrophonePermissions.Request(OnMicPermissionResult);
@@ -133,12 +135,18 @@ namespace SpatialLingo.States
             {
                 Debug.LogWarning("AppLoadingState - Microphone permission denied. Some features may be disabled.");
             }
-            CheckConsentAfterPermissions();
+
+            CheckPermissionsGrantedOrShowPopup();
         }
 
         private void OnAllCameraPermissionGranted()
         {
             PassthroughCameraPermissions.AllCameraPermissionGranted -= OnAllCameraPermissionGranted;
+        }
+
+        private void OnCameraPermissionCompleted()
+        {
+            PassthroughCameraPermissions.CameraPermissionCompleted -= OnCameraPermissionCompleted;
             RequestMicPermissionsIfNeeded();
         }
 
@@ -176,7 +184,7 @@ namespace SpatialLingo.States
         private IEnumerator CheckForMRUK()
         {
 #if UNITY_ANDROID
-            m_hasMrukPermissions = Permission.HasUserAuthorizedPermission(OVRPermissionsRequester.ScenePermission);
+            m_hasMrukPermissions = IsScenePermissionGranted();
 #else 
             HasMrukPermissions = true;
 #endif
@@ -205,21 +213,21 @@ namespace SpatialLingo.States
         private void PermissionForMrukGranted(string permission)
         {
 #if UNITY_ANDROID
-            m_hasMrukPermissions = Permission.HasUserAuthorizedPermission(OVRPermissionsRequester.ScenePermission);
+            m_hasMrukPermissions = IsScenePermissionGranted();
 #endif
         }
 
         private void PermissionForMrukDenied(string permission)
         {
 #if UNITY_ANDROID
-            m_hasMrukPermissions = Permission.HasUserAuthorizedPermission(OVRPermissionsRequester.ScenePermission);
+            m_hasMrukPermissions = IsScenePermissionGranted();
 #endif
         }
 
         private void PermissionForMrukDismissed(string permission)
         {
 #if UNITY_ANDROID
-            m_hasMrukPermissions = Permission.HasUserAuthorizedPermission(OVRPermissionsRequester.ScenePermission);
+            m_hasMrukPermissions = IsScenePermissionGranted();
 #endif
         }
 
@@ -294,8 +302,66 @@ namespace SpatialLingo.States
         private void OnDestroy()
         {
             PassthroughCameraPermissions.AllCameraPermissionGranted -= OnAllCameraPermissionGranted;
+            PassthroughCameraPermissions.CameraPermissionCompleted -= OnCameraPermissionCompleted;
             m_consentUI.OnConsentGiven -= OnConsentGiven;
             InferenceEngineUtilities.PreloadingComplete -= OnComputeShadersLoadComplete;
+        }
+
+        private static bool IsScenePermissionGranted()
+        {
+            return Permission.HasUserAuthorizedPermission(OVRPermissionsRequester.ScenePermission);
+        }
+
+        private static bool AreAllPermissionsGranted()
+        {
+            return IsScenePermissionGranted() && PassthroughCameraPermissions.IsAllCameraPermissionsGranted() && MicrophonePermissions.IsPermissionGranted();
+        }
+
+        private void StartPermissionFlow()
+        {
+            if (AreAllPermissionsGranted())
+            {
+                RequestCameraPermissionsIfNeeded();
+            }
+            else
+            {
+                m_permissionUI.OnContinue += OnContinueToPermissions;
+                UpdateTransform(m_permissionUI.transform, false, false);
+                _ = StartCoroutine(DisplayPermissionUI(false));
+            }
+        }
+
+        private void CheckPermissionsGrantedOrShowPopup()
+        {
+            if (AreAllPermissionsGranted())
+            {
+                CheckConsentAfterPermissions();
+            }
+            else
+            {
+                m_permissionUI.CheckAllPermissions += AreAllPermissionsGranted;
+                m_permissionUI.OnContinue += OnPermissionSettingsDone;
+                _ = StartCoroutine(DisplayPermissionUI(true));
+            }
+        }
+
+        private void OnPermissionSettingsDone()
+        {
+            m_permissionUI.OnContinue -= OnPermissionSettingsDone;
+            CheckConsentAfterPermissions();
+        }
+
+        private void OnContinueToPermissions()
+        {
+            m_permissionUI.OnContinue -= OnContinueToPermissions;
+            RequestCameraPermissionsIfNeeded();
+        }
+
+        private IEnumerator DisplayPermissionUI(bool withSettingsButton)
+        {
+            yield return new WaitForSeconds(0.1f); // brief delay to ensure smooth transition
+            UpdateTransform(m_permissionUI.transform, false, false);
+            m_permissionUI.Show(withSettingsButton);
         }
     }
 }

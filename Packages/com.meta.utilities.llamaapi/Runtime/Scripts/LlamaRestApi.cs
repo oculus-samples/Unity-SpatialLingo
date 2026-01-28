@@ -17,9 +17,6 @@ namespace Meta.Utilities.LlamaAPI
         private HttpClient m_client;
         private string m_model = MODEL_NAME_LLAMA4_MAVERICK;
 
-        // Declare the client version
-        private const string CLIENT_NAME = "LlamaRestApiClient";
-        private const string CLIENT_VERSION = "0.0.1";
         // Sample models to try
         private const string MODEL_NAME_LLAMA4_MAVERICK = "Llama-4-Maverick-17B-128E-Instruct-FP8";
         private const string MODEL_NAME_LLAMA4_SCOUT = "Llama-4-Scout-17B-16E-Instruct-FP8";
@@ -27,6 +24,19 @@ namespace Meta.Utilities.LlamaAPI
 
         public static Func<Awaitable<(string apiKey, string endpointOverride)>> GetApiKeyAsync = null;
         private ValueTask m_makeClientTask;
+
+        // HTTP client name + version (UserAgent)
+        private static string ClientName => "SpatialLingo"
+#if UNITY_EDITOR
+            + "-editor";
+#elif DEBUG || DEVELOPMENT_BUILD
+            + "-dev";
+#else
+            ;
+#endif
+        private static string ClientVersion
+            => Application.version;
+
 
 
         public LlamaRestApi()
@@ -66,7 +76,7 @@ namespace Meta.Utilities.LlamaAPI
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
             client.DefaultRequestHeaders.UserAgent.Clear();
-            client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue(CLIENT_NAME, CLIENT_VERSION));
+            client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue(ClientName, ClientVersion));
             client.Timeout = TimeSpan.FromSeconds(20.0f);
             return client;
         }
