@@ -120,7 +120,7 @@ namespace SpatialLingo.Lessons
         [SerializeField] private TextCloudItem m_textNode;
         [SerializeField] private Animator m_animator;
         [SerializeField] private AudioSource m_audioSource;
-        [FormerlySerializedAs("m_tMP")] [SerializeField] private TextMeshProUGUI m_tmp;
+        [FormerlySerializedAs("m_tMP")][SerializeField] private TextMeshProUGUI m_tmp;
         [SerializeField] private AnimationCurve m_animationEasingCurve;
         [SerializeField] private PlayableDirector m_completionSequence;
         [SerializeField] private TouchHandGrabInteractable m_touchHandGrabInteractableComponent;

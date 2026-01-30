@@ -14,7 +14,6 @@
     "com.meta.xr.sdk.interaction.ovr": "81.0.0",
     "com.meta.xr.sdk.platform": "81.0.0",
     "com.meta.xr.sdk.voice": "81.0.0",
-    "com.meta.xr.simulator": "81.0.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.inference": "2.2.1",
     "com.unity.ai.navigation": "2.0.9",

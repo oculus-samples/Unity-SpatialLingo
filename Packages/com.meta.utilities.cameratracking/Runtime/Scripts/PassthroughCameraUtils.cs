@@ -5,6 +5,10 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_ANDROID && !UNITY_EDITOR
+using UnityEngine.Assertions;
+#endif
+
 namespace Meta.Utilities.CameraTracking
 {
     public static class PassthroughCameraUtils

@@ -24,7 +24,7 @@ namespace SpatialLingo.SceneObjects
         [SerializeField] private Color m_verbColor = new(0.161f, 0.588f, 0.0f);
         [SerializeField] private Color m_adjColor = new(0.996f, 0.6745f, 0.145f);
         [SerializeField] private Color m_backerColor = Color.gray;
-        [FormerlySerializedAs("m_tMP")] [SerializeField] private TextMeshProUGUI m_tmp = null; //required
+        [FormerlySerializedAs("m_tMP")][SerializeField] private TextMeshProUGUI m_tmp = null; //required
         [SerializeField] private GameObject m_backer = null; //required
         [SerializeField] private float m_minWidth = 0.25f;
         [SerializeField] private float m_maxWidth = 2.0f;

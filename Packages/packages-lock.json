@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "bdf6a04ee1ae672b953b32b8a3038d5824706047"
+      "hash": "85e9c82b403d2f0f0cdb2e454ae0ffd4c08de05b"
     },
     "com.meta.utilities": {
       "version": "https://github.com/meta-quest/Unity-UtilityPackages.git?path=com.meta.utilities",
@@ -120,13 +120,6 @@
       "url": "https://packages.unity.com"
     },
     "com.meta.xr.sdk.voice": {
-      "version": "81.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.meta.xr.simulator": {
       "version": "81.0.0",
       "depth": 0,
       "source": "registry",

@@ -17,13 +17,66 @@ MonoBehaviour:
   m_context: {fileID: 11400000, guid: 0739b888df1297f4b90159c5f5b7016e, type: 2}
   m_markdownFile: {fileID: 0}
   m_priority: 1004
-  m_overrideMarkdownText: "# Getting Started\n\n\n## Getting The Code\n\nFirst, ensure
-    you have Git LFS installed by running this command:\n\n```sh\ngit lfs install\n```\n\nThen,
-    clone this repo using the \"Code\" button above, or this command:\n\n```sh\ngit
-    clone https://github.com/oculus-samples/Unity-SpatialLingo.git\n```\n\n\n###
-    Application Settings\n\nChange the contents of <a href=\"./Assets/StreamingAssets/spatialLingo_settings.json\">Assets/StreamingAssets/spatialLingo_settings.json</a>
-    to desired setup:\n\n```\n{\n    \"llama\": {\n        \"api_key\": \"<REDACTED>\"\n   
-    }\n}\n```\n\n\n## How to run the project in Unity\n\n1. Make sure you're using
-    Unity 6000.0.51f1 or newer\n2. Load the <a href=\"./Assets/SpatialLingo/Scenes/MainScene.unity\">Assets/SpatialLingo/Scenes/MainScene.unity</a>
-    scene\n3. Open the Meta XR Simulator\n4. Start Play Mode\n\n"
+  m_overrideMarkdownText: '# Getting Started
+
+
+
+    ## Getting The Code
+
+
+    First,
+    ensure you have Git LFS installed by running this command:
+
+
+    ```sh
+
+    git
+    lfs install
+
+    ```
+
+
+    Then, clone this repo using the "Code" button above,
+    or this command:
+
+
+    ```sh
+
+    git clone https://github.com/oculus-samples/Unity-SpatialLingo.git
+
+    ```
+
+
+
+    ###
+    Application Settings
+
+
+    For development, configure your Llama API key in <a
+    href="./Assets/SpatialLingo/Resources/ScriptableSettings/SpatialLingoSettings.asset">Assets/SpatialLingo/Resources/ScriptableSettings/SpatialLingoSettings.asset</a>.
+
+
+    **Important:**
+    Do not ship Quest apps with embedded API keys, as they can be extracted from
+    the app binary. For production, use `LlamaRestApi.GetApiKeyAsync` to implement
+    server-side authentication. See the <a href="./Packages/com.meta.utilities.llamaapi/README.md#configuration">Llama
+    API documentation</a> for details.
+
+
+
+    ## How to run the project in Unity
+
+
+    1.
+    Make sure you''re using Unity 6000.0.51f1 or newer
+
+    2. Load the <a href="./Assets/SpatialLingo/Scenes/MainScene.unity">Assets/SpatialLingo/Scenes/MainScene.unity</a>
+    scene
+
+    3. Open the Meta XR Simulator
+
+    4. Start Play Mode
+
+
+'
   m_overrideMarkdownRoot: ./

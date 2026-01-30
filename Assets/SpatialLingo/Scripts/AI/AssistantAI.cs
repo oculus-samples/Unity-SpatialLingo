@@ -364,14 +364,9 @@ namespace SpatialLingo.AI
             var prompt = $"You are a helpful language translation assistant that provides concise answers for the word \"{classification}\".";
             var request = new System.Text.StringBuilder();
             _ = request.Append($"Provide a list of 3 adjectives that can be used to describe the word, and 2 relevant verbs that can be used for the word, and the direct translation for the word: \"{classification}\".");
-            if (isSingleLanguage)
-            {
-                _ = request.Append($" Include the \"{languageTarget}\" translations for all words.");
-            }
-            else
-            {
-                _ = request.Append($" Include both the \"{languageUser}\" and matching \"{languageTarget}\" translations for all words.");
-            }
+            _ = isSingleLanguage
+                ? request.Append($" Include the \"{languageTarget}\" translations for all words.")
+                : request.Append($" Include both the \"{languageUser}\" and matching \"{languageTarget}\" translations for all words.");
 
             if (userLanguage == SupportedLanguage.Spanish || targetLanguage == SupportedLanguage.Spanish)
             {

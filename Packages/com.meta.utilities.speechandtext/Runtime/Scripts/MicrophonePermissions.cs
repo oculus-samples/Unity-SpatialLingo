@@ -1,7 +1,8 @@
 // Copyright (c) Meta Platforms, Inc. and affiliates.
 
 using System;
-#if PLATFORM_ANDROID
+#if PLATFORM_ANDROID && !UNITY_EDITOR
+using UnityEngine.Android;
 #endif
 
 namespace SpatialLingo.SpeechAndText
@@ -17,7 +18,7 @@ namespace SpatialLingo.SpeechAndText
         public static bool IsPermissionGranted()
         {
 #if PLATFORM_ANDROID && !UNITY_EDITOR
-        return Permission.HasUserAuthorizedPermission(MICROPHONE_PERMISSION);
+            return Permission.HasUserAuthorizedPermission(MICROPHONE_PERMISSION);
 #else
             // Always return true in the Editor or on non-Android platforms.
             return true;

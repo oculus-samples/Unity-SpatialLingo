@@ -18,8 +18,32 @@ MonoBehaviour:
   m_markdownFile: {fileID: 0}
   m_priority: 1014
   m_overrideMarkdownText: "## Configuration\n\nBecause querying the Llama service
-    requires a unique key, the value needs to be configurable. The key should be
-    stored securely and passed when initializing the API client. For example in a
-    settings file:\n\n```json\n{\n    \"llama\": {\n        \"api_key\": \"YOUR_UNIQUE_LLAMA_API_KEY_GOES_HERE\"\n   
-    }\n}\n```\n\n"
+    requires a unique API key, the value needs to be configurable. The key should
+    be stored securely and passed when initializing the API client.\n\n\n### Security
+    Considerations for Quest Apps\n\n**Important:** Quest apps that are shipped to
+    end users should **not** directly embed Llama API keys in the application. Doing
+    so exposes your API key to anyone who inspects the app binary, potentially leading
+    to unauthorized usage and unexpected charges.\n\n**Recommended Approach:** Instead
+    of embedding API keys directly, Quest apps should:\n\n1. Authenticate the client/app
+    with your own backend server\n2. Have your server validate the client's identity
+    and entitlements\n3. Make Llama API calls from your server (or proxy to another
+    service provider, or use your own hosted model with something like Ollama)\n\nThis
+    approach keeps your API keys secure on the server side and gives you control
+    over rate limiting, user authentication, and cost management.\n\n\n### Custom
+    API Key Provider\n\nYou can configure custom authentication logic using `LlamaRestApi.GetApiKeyAsync`.
+    This static delegate allows you to provide dynamic API keys and base URLs at
+    runtime:\n\n```csharp\nusing Meta.Utilities.LlamaAPI;\n\n[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]\npublic
+    static void ConfigureCustomAuth()\n{\n    LlamaRestApi.GetApiKeyAsync = async
+    () =>\n    {\n        // Example: Authenticate with your backend server\n       
+    string userToken = await AuthenticateWithYourServer();\n        string serverProxyUrl
+    = \"https://your-server.com/llama-proxy/v1/\";\n\n        // Return tuple: (apiKey/token,
+    baseUrl)\n        // baseUrl can be null to use the default Llama API endpoint\n       
+    return (userToken, serverProxyUrl);\n    };\n}\n```\n\nThe function should return
+    a tuple containing:\n\n- `string apiKey`: The API key or authentication token
+    to use\n- `string baseUrl`: The base URL for the API endpoint (or `null` to use
+    the default `https://api.llama.com/v1`)\n\n\n### Development Configuration\n\nFor
+    development and testing purposes only, you can configure your Llama API key by
+    modifying <a href=\"./Assets/SpatialLingo/Resources/ScriptableSettings/SpatialLingoSettings.asset\">Assets/SpatialLingo/Resources/ScriptableSettings/SpatialLingoSettings.asset</a>.
+    This approach is suitable for local development but should not be used in production
+    builds shipped to users.\n\n"
   m_overrideMarkdownRoot: .\Packages\com.meta.utilities.llamaapi/

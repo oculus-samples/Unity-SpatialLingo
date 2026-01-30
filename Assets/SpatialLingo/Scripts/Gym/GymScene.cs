@@ -1,6 +1,5 @@
 ﻿// Copyright (c) Meta Platforms, Inc. and affiliates.
 using Meta.Utilities.CameraTracking;
-using Meta.Utilities.LlamaAPI;
 using Meta.Utilities.ObjectClassifier;
 using Meta.XR;
 using Meta.XR.EnvironmentDepth;
