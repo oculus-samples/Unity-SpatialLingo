@@ -40,7 +40,7 @@ namespace SpatialLingo.UI
             var packageManager = currentActivity.Call<AndroidJavaObject>("getPackageManager");
             var intent = packageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage", "com.oculus.vrshell");
             _ = intent.Call<AndroidJavaObject>("putExtra", "intent_data", "systemux://settings");
-            _ = intent.Call<AndroidJavaObject>("putExtra", "uri", "applications?package=" + Application.identifier);
+            _ = intent.Call<AndroidJavaObject>("putExtra", "uri", "/applications?package=" + Application.identifier);
             currentActivity.Call("startActivity", intent);
 
             _ = StartCoroutine(CheckPermissions());
